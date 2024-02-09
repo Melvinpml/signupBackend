@@ -9,7 +9,7 @@ hashPassGen = async (pass) => {
     return bcrypt.hash(pass, salt)
 }
 
-router.post("/signup", async (req, res) => {
+router.post("/add", async (req, res) => {
     let { data } = { "data": req.body }
     let password = data.password
     hashPassGen(password).then(
